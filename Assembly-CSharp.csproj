@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+	<Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+	<ProductVersion>10.0.20506</ProductVersion>
+	<SchemaVersion>2.0</SchemaVersion>
+	<ProjectGuid>{2AC27284-BF83-A2D9-78C1-5F5CAD60CC2C}</ProjectGuid>
+	<OutputType>Library</OutputType>
+	<AppDesignerFolder>Properties</AppDesignerFolder>
+	<RootNamespace></RootNamespace>
+	<AssemblyName>Assembly-CSharp</AssemblyName>
+	<TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+	<FileAlignment>512</FileAlignment>
+	<BaseDirectory>Assets</BaseDirectory>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+	<DebugSymbols>true</DebugSymbols>
+	<DebugType>full</DebugType>
+	<Optimize>false</Optimize>
+	<OutputPath>Temp\bin\Debug\</OutputPath>
+	<DefineConstants>DEBUG;TRACE;UNITY_4_5_0;UNITY_4_5;UNITY_ANDROID;ENABLE_MICROPHONE;ENABLE_TEXTUREID_MAP;ENABLE_UNITYEVENTS;ENABLE_NEW_HIERARCHY ;ENABLE_AUDIO_FMOD;ENABLE_MONO;ENABLE_TERRAIN;ENABLE_SUBSTANCE;ENABLE_GENERICS;INCLUDE_WP8SUPPORT;ENABLE_WWW;ENABLE_IMAGEEFFECTS;ENABLE_WEBCAM;INCLUDE_METROSUPPORT;RENDER_SOFTWARE_CURSOR;ENABLE_NETWORK;ENABLE_PHYSICS;ENABLE_CACHING;ENABLE_CLOTH;UNITY_ANDROID_API;ENABLE_2D_PHYSICS;ENABLE_SHADOWS;ENABLE_AUDIO;ENABLE_NAVMESH_CARVING;ENABLE_SINGLE_INSTANCE_BUILD_SETTING;ENABLE_PROFILER;UNITY_EDITOR;UNITY_EDITOR_WIN;UNITY_TEAM_LICENSE;UNITY_PRO_LICENSE;CROSS_PLATFORM_INPUT</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+	<DebugType>pdbonly</DebugType>
+	<Optimize>true</Optimize>
+	<OutputPath>Temp\bin\Release\</OutputPath>
+	<DefineConstants>TRACE</DefineConstants>
+	<ErrorReport>prompt</ErrorReport>
+	<WarningLevel>4</WarningLevel>
+	<NoWarn>0169</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+	<Reference Include="System" />
+    <Reference Include="System.XML" />
+	<Reference Include="System.Core" />
+	<Reference Include="System.Xml.Linq" />
+	<Reference Include="UnityEngine">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEngine.dll</HintPath>
+	</Reference>
+	<Reference Include="UnityEditor">
+	  <HintPath>C:/Program Files (x86)/Unity/Editor/Data/Managed/UnityEditor.dll</HintPath>
+	</Reference>
+  </ItemGroup>
+  <ItemGroup>
+     <Compile Include="Assets\Characters\Third Person Character\Scripts\AICharacterControl.cs" />
+     <Compile Include="Assets\Characters\Third Person Character\Scripts\ThirdPersonCharacter.cs" />
+     <Compile Include="Assets\Characters\Third Person Character\Scripts\ThirdPersonUserControl.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\AbstractButton.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\AxisTouchButton.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\Button.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\ButtonDownTextureChange.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\ButtonFactory.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\CrossPlatformInput.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\Joystick.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\JoystickAbstract.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\MobileControlRig.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\PlatformSpecific\MobileInput.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\PlatformSpecific\StandaloneInput.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\TiltInput.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\TouchJoystick.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\TouchPad.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\TouchPadPositional.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\TouchPadRelativePositional.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\TouchPadSwipe.cs" />
+     <Compile Include="Assets\Cross Platform Input\Scripts\VirtualInput.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CloudRecoBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\CylinderTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DataSetLoadBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultInitializationErrorHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultSmartTerrainEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\DefaultTrackableEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\GLErrorHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\ImageTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\AndroidUnityPlayer.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\BGRenderingBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\ComponentFactoryStarterBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\Internal\VuforiaBehaviourComponentFactory.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\KeepAliveBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MarkerBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MaskOutBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\MultiTargetBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\PropBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\QCARBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\SetBGCameraLayerBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\SmartTerrainBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\SurfaceBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TextRecoBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\TurnOffWordBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\UserDefinedTargetBuildingBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\VirtualButtonBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WebCamBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WireframeBehaviour.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WireframeTrackableEventHandler.cs" />
+     <Compile Include="Assets\Qualcomm Augmented Reality\Scripts\WordBehaviour.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\ActivateTrigger.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\AutoMobileShaderSwitch.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\AutoMoveAndRotate.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\CombineChildren.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\DynamicShadowSettings.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\FPSCounter.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\FollowTarget.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\ForcedReset.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\MeshCombineUtility.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\ObjectResetter.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\ParticleSystemDestroyer.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\PlatformSpecificContent.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\SimpleActivatorMenu.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\SimpleMouseRotator.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\TimedObjectActivator.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\WaypointCircuit.cs" />
+     <Compile Include="Assets\Sample Assets\Utility\WaypointProgressTracker.cs" />
+     <Compile Include="Assets\Scripts\PlaceTargetWithMouse.cs" />
+     <None Include="Assets\Shaders\Projector Additive.shader" />
+     <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
+     <None Include="Assets\Cross Platform Input\Cross Platform Input Guidelines.txt" />
+     <None Include="Assets\Shaders\Mobile-Spec.shader" />
+     <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
+     <None Include="Assets\Characters\Third Person Character\Third Person Character Guidelines.txt" />
+     <None Include="Assets\StreamingAssets\QCAR\unity.txt" />
+ <Reference Include="Qualcomm.Vuforia.UnityExtensions">
+ <HintPath>D:/Documents/GitHub/Unity-Augmented-Game/Assets/Qualcomm Augmented Reality/Scripts/Internal/Qualcomm.Vuforia.UnityExtensions.dll</HintPath>
+ </Reference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+	   Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  
+</Project>
