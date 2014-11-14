@@ -63,7 +63,7 @@ LightmapSettings:
 NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    agentRadius: .400000006
+    agentRadius: .300000012
     agentHeight: 1
     agentSlope: 48.2000008
     agentClimb: .100000001
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mTrackableName: FrameMarker0
-  mPreviousScale: {x: 1, y: 1, z: 1}
+  mPreviousScale: {x: 5, y: 5, z: 5}
   mPreserveChildSize: 0
   mInitializedInEditor: 1
   mMarkerID: 0
@@ -551,7 +551,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -667,9 +667,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: .406896591, g: 0, b: 1, a: 1}
+  m_Color: {r: .0605536439, g: .0973870233, b: .823529422, a: 1}
   m_Intensity: 8
-  m_Range: 3
+  m_Range: 2
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -687,7 +687,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -997,7 +997,6 @@ GameObject:
   - 4: {fileID: 194076220}
   - 33: {fileID: 194076219}
   - 23: {fileID: 194076218}
-  - 114: {fileID: 194076221}
   m_Layer: 2
   m_Name: JHLogo
   m_TagString: Untagged
@@ -1046,24 +1045,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 338906162}
   m_RootOrder: 0
---- !u!114 &194076221
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 194076217}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1347817507220a4384f3ff6f7c24546, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveUnitsPerSecond:
-    value: {x: 0, y: 0, z: 0}
-    space: 1
-  rotateDegreesPerSecond:
-    value: {x: 0, y: 100, z: 0}
-    space: 1
-  ignoreTimescale: 0
 --- !u!1 &200972525
 GameObject:
   m_ObjectHideFlags: 0
@@ -1220,7 +1201,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -1497,7 +1478,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 15
+      value: 26.6727371
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1534,6 +1515,10 @@ Prefab:
     - target: {fileID: 400000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
       propertyPath: m_LocalScale.y
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
+      propertyPath: m_HDR
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bf30d577eead1ef40bcf2b404289daf4, type: 2}
@@ -1872,7 +1857,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -2120,7 +2105,7 @@ Transform:
   m_PrefabInternal: {fileID: 255379947}
   m_GameObject: {fileID: 324954268}
   m_LocalRotation: {x: .707106888, y: 0, z: 0, w: .707106769}
-  m_LocalPosition: {x: 0, y: 15, z: 0}
+  m_LocalPosition: {x: 0, y: 26.6727371, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 500059319}
@@ -2136,9 +2121,11 @@ GameObject:
   - 95: {fileID: 338906164}
   - 65: {fileID: 338906163}
   - 54: {fileID: 338906166}
+  - 114: {fileID: 338906165}
+  - 136: {fileID: 338906167}
   m_Layer: 2
   m_Name: PickupItem
-  m_TagString: Untagged
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2168,10 +2155,10 @@ BoxCollider:
   m_GameObject: {fileID: 338906161}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 50, y: 70, z: 50}
-  m_Center: {x: 0, y: 30, z: 0}
+  m_Size: {x: 35, y: 52, z: 35}
+  m_Center: {x: 0, y: 35, z: 0}
 --- !u!95 &338906164
 Animator:
   serializedVersion: 3
@@ -2187,6 +2174,24 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
+--- !u!114 &338906165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338906161}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1347817507220a4384f3ff6f7c24546, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveUnitsPerSecond:
+    value: {x: 0, y: 0, z: 0}
+    space: 1
+  rotateDegreesPerSecond:
+    value: {x: 0, y: 150, z: 0}
+    space: 1
+  ignoreTimescale: 0
 --- !u!54 &338906166
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -2202,6 +2207,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!136 &338906167
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 338906161}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 25
+  m_Height: 60
+  m_Direction: 1
+  m_Center: {x: 0, y: 36.8899994, z: 0}
 --- !u!1 &349058316
 GameObject:
   m_ObjectHideFlags: 0
@@ -2279,6 +2297,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 918af20e45b2fd641af860076e58c613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  MyGameDirectorLogic: {fileID: 500059320}
 --- !u!114 &349058321
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2523,6 +2542,7 @@ GameObject:
   - 4: {fileID: 378581973}
   - 23: {fileID: 378581972}
   - 102: {fileID: 378581971}
+  - 114: {fileID: 378581974}
   m_Layer: 0
   m_Name: TimeText
   m_TagString: Untagged
@@ -2537,7 +2557,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 378581970}
-  m_Text: the object!
+  m_Text: Logo!
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -2583,6 +2603,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 999626336}
   m_RootOrder: 3
+--- !u!114 &378581974
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 378581970}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02b63570ec2767e439b0dcd1f4fef0ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myTimeTextMesh: {fileID: 378581971}
+  myTimerEnabled: 0
 --- !u!1 &387399524
 GameObject:
   m_ObjectHideFlags: 0
@@ -2948,13 +2981,13 @@ AudioSource:
   m_GameObject: {fileID: 463657782}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: a176bd3008057fa4bb5bd3922ca569ba, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 4f8aea48110d54a449dcb45e8156518b, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .200000003
+  m_Volume: .890999973
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 140
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -3090,13 +3123,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f95cf1cfeaa61549b604e35516f31fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MyDurationTime: 20
-  MyPickupPointValue: 1
-  MyPickupTimeValue: 5
-  MyMaxPos: {x: 1.39999998, y: .800000012, z: 1.39999998}
-  MyMinPos: {x: -1.39999998, y: .800000012, z: -1.39999998}
-  FirstPickupPos: {x: 0, y: 1, z: 0}
-  MyAICollision: {fileID: 0}
+  myCDTimer: {fileID: 378581974}
+  myPScore: {fileID: 608367476}
+  mySplayer: {fileID: 1422143778}
+  DefaultTimerDuration: 20
+  MaxRanPos: {x: .5, y: 1.5, z: 1.5}
+  MinRanPos: {x: -1.5, y: 1.5, z: -1.5}
+  PickupPointValue: 1
+  PickupTimeValue: 3
+  PickupItemGameObjectTag: Item
 --- !u!1 &524562390
 GameObject:
   m_ObjectHideFlags: 0
@@ -3376,6 +3411,7 @@ GameObject:
   - 4: {fileID: 608367473}
   - 23: {fileID: 608367475}
   - 102: {fileID: 608367474}
+  - 114: {fileID: 608367476}
   m_Layer: 0
   m_Name: ScoreText
   m_TagString: Untagged
@@ -3402,7 +3438,7 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 608367472}
-  m_Text: Get
+  m_Text: Get the
   m_OffsetZ: 0
   m_CharacterSize: 1
   m_LineSpacing: 1
@@ -3436,6 +3472,18 @@ Renderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
+--- !u!114 &608367476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 608367472}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 29a67e800976fd44aa6185fe6e481be4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  myScoreTextMesh: {fileID: 608367474}
 --- !u!1 &612837956
 GameObject:
   m_ObjectHideFlags: 0
@@ -3473,9 +3521,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: .117241383, g: 0, b: 1, a: 1}
-  m_Intensity: 5
-  m_Range: 5
+  m_Color: {r: .0605536439, g: .0973870233, b: .823529422, a: 1}
+  m_Intensity: 8
+  m_Range: 2
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -3493,7 +3541,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -3681,7 +3729,7 @@ GameObject:
   - 4: {fileID: 674291124}
   - 82: {fileID: 674291125}
   m_Layer: 0
-  m_Name: PickUpSound
+  m_Name: TimeAlertSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3707,9 +3755,9 @@ AudioSource:
   m_GameObject: {fileID: 674291123}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f0efd582f0b936144890263b76afe8a7, type: 3}
+  m_audioClip: {fileID: 8300000, guid: b94eb2fce031b304b9c6667c79bd4de8, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .200000003
+  m_Volume: .800000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -3979,7 +4027,7 @@ GameObject:
   - 4: {fileID: 809725853}
   - 82: {fileID: 809725854}
   m_Layer: 0
-  m_Name: TimeAlertSound
+  m_Name: PickUpSound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4005,13 +4053,13 @@ AudioSource:
   m_GameObject: {fileID: 809725852}
   m_Enabled: 1
   serializedVersion: 3
-  m_audioClip: {fileID: 8300000, guid: f947b7aa2de239542a8cd35fe3b40427, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 37e6e9e3318616344ae8a744cc199220, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: .200000003
+  m_Volume: .800000012
   m_Pitch: 1
   Loop: 0
   Mute: 0
-  Priority: 128
+  Priority: 202
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
@@ -4413,7 +4461,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -4850,7 +4898,7 @@ NavMeshAgent:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1131101148}
   m_Enabled: 1
-  m_Radius: .00100000005
+  m_Radius: .00999999978
   m_Speed: 3.5
   m_Acceleration: 200
   avoidancePriority: 50
@@ -4920,7 +4968,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -5011,7 +5059,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6106,6 +6154,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1422143777}
+  - 114: {fileID: 1422143778}
   m_Layer: 0
   m_Name: SoundActors
   m_TagString: Untagged
@@ -6128,6 +6177,20 @@ Transform:
   - {fileID: 809725853}
   m_Father: {fileID: 500059319}
   m_RootOrder: 2
+--- !u!114 &1422143778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1422143776}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f13db6cc74db724cb5c86041ee57f1b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  GameOverSound: {fileID: 463657784}
+  TimeAlertSound: {fileID: 674291125}
+  PickUpSound: {fileID: 809725854}
 --- !u!1 &1423883526
 GameObject:
   m_ObjectHideFlags: 0
@@ -6185,7 +6248,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -6583,9 +6646,9 @@ Light:
   m_Enabled: 1
   serializedVersion: 3
   m_Type: 2
-  m_Color: {r: .407843143, g: 0, b: .996078432, a: 1}
-  m_Intensity: 5
-  m_Range: 5
+  m_Color: {r: .0605536439, g: .0973870233, b: .823529422, a: 1}
+  m_Intensity: 8
+  m_Range: 2
   m_SpotAngle: 30
   m_CookieSize: 10
   m_Shadows:
@@ -6603,7 +6666,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -7087,7 +7150,7 @@ Light:
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_Lightmapping: 1
+  m_Lightmapping: 2
   m_ShadowSamples: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0

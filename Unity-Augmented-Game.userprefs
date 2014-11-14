@@ -1,0 +1,16 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CountDownTimer.js">
+    <Files>
+      <File FileName="Assets\SoundPlayer.js" Line="59" Column="3" />
+      <File FileName="Assets\Scripts\GameLogic.js" Line="26" Column="25" />
+      <File FileName="Assets\CountDownTimer.js" Line="63" Column="1" />
+      <File FileName="Assets\PlayerScore.js" Line="18" Column="2" />
+      <File FileName="Assets\Scripts\AICharacterCollision.js" Line="21" Column="21" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

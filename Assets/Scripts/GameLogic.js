@@ -1,137 +1,106 @@
 ﻿#pragma strict
+/*
+Author:      Jonny van der Hoeven
 
+  This program is free software: you can redistribute it and/or modify
+ it under the terms of the GNU General Public License as published by
+ the Free Software Foundation, either version 3 of the License, or
+ (at your option) any later version.
 
+ This program is distributed in the hope that it will be useful,
+ but WITHOUT ANY WARRANTY; without even the implied warranty of
+ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ GNU General Public License for more details.
 
-var MyDurationTime: float; 
-var MyPickupPointValue: int;
-var MyPickupTimeValue: int;
-var MyMaxPos : Vector3 = Vector3.zero;
-var MyMinPos : Vector3 = Vector3.zero;
-var FirstPickupPos : Vector3;
-var MyAICollision: AICharacterCollision;
+ You should have received a copy of the GNU General Public License
+ along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ */
+ 
+// External classes.
+var myCDTimer : CountDownTimer;			// Helper class for countdowntimer.
+var myPScore : PlayerScore;				// Helper class for scorekeeping.
+var mySplayer : SoundPlayer;			// Helper class for sound playing
 
-private var MyPlayerScore: int = 0;
-private var MyTimerEnabled: boolean = false;
+var DefaultTimerDuration : float; 		// Duration for each new countdown.
+var MaxRanPos : Vector3; 				// Max random position from center when spawning new item.
+var MinRanPos : Vector3; 				// Min random position from center when spawning new item.
+var PickupPointValue : int; 			// Value in points per pickup.
+var PickupTimeValue : int; 				// Amount of time incremented during pickup.
+var PickupItemGameObjectTag : String;	// React only to tagged collisions.
 
-private var MyTimeMesh: TextMesh;
-private var MyScoreMesh: TextMesh;
-private var MyTimer: float = MyDurationTime; 
-
-
-function Start () {
-	// Connect to characters:
-	MyTimeMesh = GameObject.Find("TimeText").GetComponent(TextMesh);	
-	MyScoreMesh = GameObject.Find("ScoreText").GetComponent(TextMesh);
-	MyAICollision = GameObject.Find("AI Character").GetComponent("AICharacterCollision");
-}
-
-function Update(){
-	
-	//if timer enabled start counting down.
-	if (MyTimerEnabled) {
- 		MyTimer -= Time.deltaTime;
-		
-		//change game state based on timer
-		CheckTimerState();
-		UpdateTimeMeshText();
+// Main loop.
+function Update()
+{
+	try 
+	{
+		if (myCDTimer.isActivated()) 		// If countdown is running
+		{
+			myCDTimer.UpdateMesh();			// Update timer textmesh
+			mySplayer.CountDownPlaySound(myCDTimer.GetTime());
+		}
 	}
+	catch (err)
+{
+	Debug.LogError(err.Message);
+}
 }
 
-//Check for state changes during countdown
-function CheckTimerState(): void {
-	if (MyTimer > 3) {	//do nothing
-		return; 
-	} else if (MyTimer > 3 && MyTimer < 3.1){ // alert player
-		PlaySound("TimeAlertSound");
-  	} else if (MyTimer > 2 && MyTimer < 2.1){ // alert player
-		PlaySound("TimeAlertSound");
-  	} else if (MyTimer > 1 && MyTimer < 1.1){ // alert player
-		PlaySound("TimeAlertSound");
-  	} else if (MyTimer < 0){
-  		// game over, stop timer and wait for another collision
-		PlaySound("GameOverSound");
-		TimerEnabled(false);
-	}
-}
-
-//timer interfaces
-function UpdateTimeMeshText(): void {
-	MyTimeMesh.text = MyTimer.ToString("F0");
-}
-function TimerEnabled(TState: boolean): void {
-	MyTimerEnabled = TState;
-	UpdateTimeMeshText();
-}
-public function UpdateTimer(plTime: float): void {
-	MyTimer = plTime;
-	UpdateTimeMeshText();
-}
-function IncrementTimer(plTime: float): void {
-	MyTimer += plTime;
-	UpdateTimeMeshText();
-}
-
-//score interfaces
-function UpdateScoreMeshText(tString : String): void {
-	MyScoreMesh.text = tString;
-}
-function UpdatePlayerScore(plScore: int) {
-	MyPlayerScore = plScore;
-	UpdateScoreMeshText(MyPlayerScore.ToString());
-}
-function IncrementPlayerScore(plScore: int) {
-	MyPlayerScore += plScore;
-	UpdateScoreMeshText(MyPlayerScore.ToString());
-}
-
-//random position generator for itemdrop
-public function GetRandomPosisionWithinBounds() {
-	var newPos : Vector3 = new Vector3(Random.Range(MyMinPos.x,MyMaxPos.x),
- 	Random.Range(MyMinPos.y,MyMaxPos.y),
- 	Random.Range(MyMinPos.z,MyMaxPos.z));
- 	return newPos;
-}
-
-//Main Entry for character collisions
-public function HandleCollision(Col :Collision):void {
-	if (Col.collider.name == "PickupItem") {
+// Main entry for character collisions.
+public function HandleCollision(Col :Collision) : void {
+	if (Col.collider.tag == PickupItemGameObjectTag) 
+	{
 			PickeUpItem(Col);
 	}
 }
-//Item pickup game logic
-function PickeUpItem(Col :Collision) {
-	// play pickup sound
-		PlaySound("PickUpSound");
-	
-	// if timer is active increment points and time
-	if (MyTimerEnabled) {
-		// move collider pickupitem to random pos
+
+function PickeUpItem(Col :Collision) 
+{
+	// Play pickup sound.
+	try
+	{
+		mySplayer.PickupPlaySound();
 		
-		Col.collider.transform.localPosition = GetRandomPosisionWithinBounds();
-
-		//Increment player score, time
-		IncrementPlayerScore(MyPickupPointValue);
-		IncrementTimer(MyPickupTimeValue);
-	}
-	// If timer inactive  start new game
-	else{
-		// reset collider pickupitem to first pickup position
-		Col.collider.transform.localPosition = FirstPickupPos;
-
-		// clear points, reset time
-		// and enable timer for next round.
-		UpdatePlayerScore(MyPickupPointValue);
-		UpdateTimer(MyDurationTime);
-		TimerEnabled(true);
+		DoPickupLogic(Col);
+	}		
+	catch (err)
+	{
+		Debug.LogError(err.Message);
 	}
 }
 
-function PlaySound(SName : String) : void {
-	var MyAudioSource: AudioSource;
-	
-	MyAudioSource = GameObject.Find(SName).GetComponent(AudioSource);
-	
-	if (!MyAudioSource.isPlaying){
-		MyAudioSource.Play();
+//runs through pickuplogic
+function DoPickupLogic(Col: Collision)
+{
+	// if timer is active increment points and time.
+	if (myCDTimer.isActivated()) 		
+	{
+		//Increment player score.
+		myPScore.Increment(PickupPointValue);
+		
+		//Increment time.
+		myCDTimer.Increment(PickupTimeValue);
+
 	}
+	// If timer inactive start new game.
+	else
+	{								
+		// Reset score.
+		myPScore.SetScore(PickupPointValue);
+									
+		// Enable timer for next round.
+		myCDTimer.StartCounting(DefaultTimerDuration);
+	}
+
+		// move pickup item to new random pos.
+		Col.collider.transform.localPosition = NewRandomVector();
+}
+			
+// Create random vector3.
+function NewRandomVector() : Vector3
+{
+	var newPos : Vector3;
+	newPos = new Vector3(Random.Range(MinRanPos.x,MaxRanPos.x),
+ 						 Random.Range(MinRanPos.y,MaxRanPos.y),
+ 						 Random.Range(MinRanPos.z,MaxRanPos.z));
+ 	return newPos;
 }

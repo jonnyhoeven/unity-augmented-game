@@ -49,7 +49,10 @@
      <Compile Include="Assets\Sample Assets\Utility\DragRigidbody.js" />
      <Compile Include="Assets\Sample Assets\Utility\TimedObjectDestructor.js" />
      <Compile Include="Assets\Scripts\AICharacterCollision.js" />
+     <Compile Include="Assets\Scripts\CountDownTimer.js" />
      <Compile Include="Assets\Scripts\GameLogic.js" />
+     <Compile Include="Assets\Scripts\PlayerScore.js" />
+     <Compile Include="Assets\Scripts\SoundPlayer.js" />
      <None Include="Assets\Shaders\Projector Additive.shader" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
      <None Include="Assets\Cross Platform Input\Cross Platform Input Guidelines.txt" />

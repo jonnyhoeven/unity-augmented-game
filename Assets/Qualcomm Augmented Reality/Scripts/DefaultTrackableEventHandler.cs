@@ -92,7 +92,7 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 
 			if (component.rigidbody != null)
 			{
-			//	component.rigidbody.isKinematic = false;
+			component.rigidbody.isKinematic = false;
 			}
 
 		}
@@ -118,7 +118,9 @@ public class DefaultTrackableEventHandler : MonoBehaviour,
 			if (component.rigidbody != null)
 			{
 				component.rigidbody.velocity = Vector3.zero;
-				//component.rigidbody.isKinematic  = true;
+				component.rigidbody.isKinematic  = true;
+			
+			
 			}
 
 			component.enabled = false;
