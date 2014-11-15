@@ -26,7 +26,7 @@ function OnGUI ()
 	{
 		if (MyGameDirectorLogic.AutoWalk == true) // if autowalk is active
 		{
-	    	if (GUI.Button (Rect (20,40,80,20), "Play mode"))
+	    	if (GUI.Button (Rect (40,80,160,40), "Play mode"))
     		{
 				MyGameDirectorLogic.AutoWalk = false; //set autowalk to false
 				MyGameDirectorLogic.StopAutoWalk();
@@ -34,7 +34,7 @@ function OnGUI ()
 		}
 		else
 		{
-    		if (GUI.Button (Rect (20,40,80,20), "Auto mode"))
+    		if (GUI.Button (Rect (40,80,160,40), "Auto mode"))
     		{
 				MyGameDirectorLogic.AutoWalk = true; //Set autowalk to true
 				MyGameDirectorLogic.DoAutoWalk();
