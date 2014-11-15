@@ -2748,8 +2748,8 @@ MonoBehaviour:
   myCDTimer: {fileID: 378581974}
   myPScore: {fileID: 608367476}
   mySplayer: {fileID: 1422143778}
-  myPUItem: {fileID: 0}
-  myAIChar: {fileID: 0}
+  myPUItem: {fileID: 338906161}
+  myAIChar: {fileID: 349058316}
   DefaultTimerDuration: 30
   MaxRanPos: {x: 1.20000005, y: 1.5, z: 1.5}
   MinRanPos: {x: -1.20000005, y: 1.5, z: -1.5}
@@ -3805,6 +3805,18 @@ Prefab:
       propertyPath: m_FontSize
       value: 30
       objectReference: {fileID: 0}
+    - target: {fileID: 400282, guid: e43b1b8760f22584d9c873c08796b57d, type: 2}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400026, guid: e43b1b8760f22584d9c873c08796b57d, type: 2}
+      propertyPath: myPUItem
+      value: 
+      objectReference: {fileID: 338906161}
+    - target: {fileID: 11400026, guid: e43b1b8760f22584d9c873c08796b57d, type: 2}
+      propertyPath: myAIChar
+      value: 
+      objectReference: {fileID: 349058316}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e43b1b8760f22584d9c873c08796b57d, type: 2}
   m_RootGameObject: {fileID: 500059318}

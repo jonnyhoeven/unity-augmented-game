@@ -54,25 +54,22 @@ function Update()
 }
 
 // Main entry for character collisions.
-public function HandleCollision(Col :Collision) : void {
+public function HandleCollision(Col :Collision) {
 	if (Col.collider.tag == PickupItemGameObjectTag) 
 	{
-			PickeUpItem(Col);
+		DoPickupLogic(Col);
 	}
 }
 
-function PickeUpItem(Col :Collision) 
+// Item pickup game logic.
+function DoPickupLogic(Col : Collision)
 {
+
 	// Play pickup sound.
 	if (mySplayer != null) {
 		mySplayer.PickupPlaySound();
-	}		
-	DoPickupLogic(Col);
-}
+	}	
 
-// Item pickup game logic.
-function DoPickupLogic(Col: Collision)
-{
 	// generate new position
 	LastRandomPos = NewRandomVector();
 	// move pickup item to new random pos.
@@ -80,9 +77,13 @@ function DoPickupLogic(Col: Collision)
 
 	// check if autowalk is active
 
-	if (AutoWalk)
+	if (AutoWalk == true)
 	{
-		DoAutoWalk(Col); //Set target to moved collider
+		DoAutoWalk(); //Set target to moved collider
+	}
+	else
+	{
+		StopAutoWalk();
 	}
 
 	if (myCDTimer != null && myPScore != null)
@@ -110,14 +111,21 @@ function DoPickupLogic(Col: Collision)
 
 		
 			
-function DoAutoWalk(Col: Collision)
+function DoAutoWalk()
 {
-	if (myAIChar != null)
+	if (myAIChar != null && myPUItem != null)
 	{
-		myAIChar.SendMessage("SetTarget",Col.collider.transform);
+		myAIChar.SendMessage("SetTarget",myPUItem.transform);
 	}				
-}					
-			
+}	
+
+function StopAutoWalk()
+{
+	if (myAIChar != null && myPUItem != null)
+	{
+		myAIChar.SendMessage("SetTarget",null);
+	}				
+}	
 			
 									
 // Create random vector3.

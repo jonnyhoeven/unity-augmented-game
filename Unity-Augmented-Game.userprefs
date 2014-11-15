@@ -1,17 +1,25 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Qualcomm Augmented Reality\PlaceTargetWithMouse.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\GameGUI.js">
     <Files>
-      <File FileName="Assets\GameGUI.js" Line="7" Column="38" />
-      <File FileName="Assets\Scripts\SoundPlayer.js" Line="50" Column="2" />
-      <File FileName="Assets\Scripts\GameLogic.js" Line="117" Column="58" />
-      <File FileName="Assets\Scripts\AICharacterCollision.js" Line="19" Column="1" />
-      <File FileName="Assets\Scripts\Qualcomm Augmented Reality\PlaceTargetWithMouse.cs" Line="21" Column="6" />
+      <File FileName="Assets\Scripts\Qualcomm Augmented Reality\DefaultTrackableEventHandler.cs" Line="1" Column="1" />
+      <File FileName="Assets\GameGUI.js" Line="25" Column="1" />
+      <File FileName="Assets\Scripts\GameLogic.js" Line="126" Column="1" />
+      <File FileName="Assets\Scripts\SoundPlayer.js" Line="38" Column="1" />
+      <File FileName="Assets\Scripts\CountDownTimer.js" Line="58" Column="1" />
+      <File FileName="Assets\Scripts\PlayerScore.js" Line="33" Column="1" />
+      <File FileName="Assets\Scripts\AICharacterCollision.js" Line="24" Column="1" />
+      <File FileName="Assets\Scripts\Qualcomm Augmented Reality\AutoMobileShaderSwitch.cs" Line="35" Column="8" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore>
-      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\Scripts\GameLogic.js" line="85" />
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\GameGUI.js" line="39" />
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\GameGUI.js" line="31" />
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\Scripts\GameLogic.js" line="82" />
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\Scripts\GameLogic.js" line="118" />
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\Scripts\GameLogic.js" line="101" />
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\Scripts\GameLogic.js" line="93" />
     </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
