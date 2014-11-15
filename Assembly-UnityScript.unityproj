@@ -46,22 +46,21 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Sample Assets\Utility\DragRigidbody.js" />
-     <Compile Include="Assets\Sample Assets\Utility\TimedObjectDestructor.js" />
+     <Compile Include="Assets\GameGUI.js" />
      <Compile Include="Assets\Scripts\AICharacterCollision.js" />
      <Compile Include="Assets\Scripts\CountDownTimer.js" />
      <Compile Include="Assets\Scripts\GameLogic.js" />
      <Compile Include="Assets\Scripts\PlayerScore.js" />
+     <Compile Include="Assets\Scripts\Qualcomm Augmented Reality\DragRigidbody.js" />
+     <Compile Include="Assets\Scripts\Qualcomm Augmented Reality\TimedObjectDestructor.js" />
      <Compile Include="Assets\Scripts\SoundPlayer.js" />
      <None Include="Assets\Shaders\Projector Additive.shader" />
      <None Include="Assets\Editor\QCAR\WebcamProfiles\profiles.xml" />
-     <None Include="Assets\Cross Platform Input\Cross Platform Input Guidelines.txt" />
      <None Include="Assets\Shaders\Mobile-Spec.shader" />
      <None Include="Assets\Plugins\Android\AndroidManifest.xml" />
-     <None Include="Assets\Characters\Third Person Character\Third Person Character Guidelines.txt" />
      <None Include="Assets\StreamingAssets\QCAR\unity.txt" />
  <Reference Include="Qualcomm.Vuforia.UnityExtensions">
- <HintPath>D:/Documents/GitHub/Unity-Augmented-Game/Assets/Qualcomm Augmented Reality/Scripts/Internal/Qualcomm.Vuforia.UnityExtensions.dll</HintPath>
+ <HintPath>D:/Documents/GitHub/Unity-Augmented-Game/Assets/Scripts/Qualcomm Augmented Reality/Internal/Qualcomm.Vuforia.UnityExtensions.dll</HintPath>
  </Reference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

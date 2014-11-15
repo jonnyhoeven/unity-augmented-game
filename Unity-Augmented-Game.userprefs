@@ -1,16 +1,18 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\CountDownTimer.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\Qualcomm Augmented Reality\PlaceTargetWithMouse.cs">
     <Files>
-      <File FileName="Assets\SoundPlayer.js" Line="59" Column="3" />
-      <File FileName="Assets\Scripts\GameLogic.js" Line="26" Column="25" />
-      <File FileName="Assets\CountDownTimer.js" Line="63" Column="1" />
-      <File FileName="Assets\PlayerScore.js" Line="18" Column="2" />
-      <File FileName="Assets\Scripts\AICharacterCollision.js" Line="21" Column="21" />
+      <File FileName="Assets\GameGUI.js" Line="7" Column="38" />
+      <File FileName="Assets\Scripts\SoundPlayer.js" Line="50" Column="2" />
+      <File FileName="Assets\Scripts\GameLogic.js" Line="117" Column="58" />
+      <File FileName="Assets\Scripts\AICharacterCollision.js" Line="19" Column="1" />
+      <File FileName="Assets\Scripts\Qualcomm Augmented Reality\PlaceTargetWithMouse.cs" Line="21" Column="6" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="D:\Documents\GitHub\Unity-Augmented-Game\Assets\Scripts\GameLogic.js" line="85" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>

@@ -2,5 +2,6 @@ Unity-Augmented-Game
 ====================
 Unity demo game
 
-This is a simple demonstration of game elements used in augmented reality using Unity and Vuforia
-Print out Marker0 and start collecting.
+This is a simple demonstration of game elements used combination with augmented reality using Unity and Vuforia.
+
+Print out included Marker0.png start app and point the camera to the target.

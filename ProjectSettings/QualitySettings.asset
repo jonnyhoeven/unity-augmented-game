@@ -48,12 +48,12 @@ QualitySettings:
     name: Simple
     pixelLightCount: 1
     shadows: 0
-    shadowResolution: 1
+    shadowResolution: 0
     shadowProjection: 1
     shadowCascades: 1
     shadowDistance: 20
     blendWeights: 2
-    textureQuality: 0
+    textureQuality: 2
     anisotropicTextures: 1
     antiAliasing: 0
     softParticles: 0
@@ -121,11 +121,11 @@ QualitySettings:
     particleRaycastBudget: 4096
     excludedTargetPlatforms: []
   m_PerPlatformDefaultQuality:
-    Android: 2
-    BlackBerry: 2
-    FlashPlayer: 2
-    Standalone: 4
-    WP8: 2
-    Web: 3
-    Windows Store Apps: 4
-    iPhone: 2
+    Android: 1
+    BlackBerry: 1
+    FlashPlayer: 1
+    Standalone: 1
+    WP8: 1
+    Web: 1
+    Windows Store Apps: 1
+    iPhone: 1

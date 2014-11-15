@@ -24,20 +24,13 @@ var PickUpSound: AudioSource;
 function CountDownPlaySound(MyTimer : float)
 {
 
-  	if 		(MyTimer.ToString("F1") =="0.9") {PlaySound(TimeAlertSound);}
-	else if (MyTimer.ToString("F1") =="1.9") {PlaySound(TimeAlertSound);}
-	else if (MyTimer.ToString("F1") =="2.9") {PlaySound(TimeAlertSound);}
-	else if (MyTimer.ToString("F1") =="3.9") {PlaySound(TimeAlertSound);}	
-	else if (MyTimer.ToString("F1") =="4.9") {PlaySound(TimeAlertSound);}	
-  	
-  	if (MyTimer < 0) // Time up.
-  	{	
-  		
-  		// Play gameover sound
-		PlaySound(GameOverSound);
-	}
+  	if 		(MyTimer.ToString("F1") == "5.0") {PlaySound(TimeAlertSound);}
+	else if (MyTimer.ToString("F1") == "4.0") {PlaySound(TimeAlertSound);}
+	else if (MyTimer.ToString("F1") == "3.0") {PlaySound(TimeAlertSound);}
+	else if (MyTimer.ToString("F1") == "2.0") {PlaySound(TimeAlertSound);}	
+	else if (MyTimer.ToString("F1") == "1.0") {PlaySound(TimeAlertSound);}	
+  	else if (MyTimer < 0 ) {PlaySound(GameOverSound);} // Play gameover sound
 	
-
 }
 	
 function PickupPlaySound()
@@ -47,16 +40,12 @@ function PickupPlaySound()
 
 function PlaySound(myASource : AudioSource)
 {
-	if (!myASource.isPlaying)
+	if (myASource != null)
 	{
- 		try
-	   	{	
+		if (!myASource.isPlaying)
+		{
 			myASource.Play();
 		}
- 		catch (err)
-    	{
-       		Debug.LogError(err.Message);
-    	}
 	}
 }
 	

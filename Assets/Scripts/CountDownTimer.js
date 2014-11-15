@@ -61,24 +61,26 @@ Author:      Jonny van der Hoeven
 	// Start initialize.
 	
 
-	function UpdateMesh()
-	{
+	function UpdateTimer() {
  		if (myTimer > 0)
 		{
  			myTimer -= Time.deltaTime;
- 		
- 			try
-	    	{	
- 				myTimeTextMesh.text = myTimer.ToString("F0");
- 			}
- 			catch (err)
-    		{
-        		Debug.LogError(err.Message);
-    		}
- 				
+ 			UpdateMesh();
  		}
  		else if (myTimer < 0)
  		{
 			myTimerEnabled = false;
+		}
+	}
+	
+	function UpdateMesh()
+	{
+		try
+    	{	
+			myTimeTextMesh.text = myTimer.ToString("F0");
+		}
+		catch (err)
+		{
+    		Debug.LogError(err.Message);
 		}
 	}
